@@ -29,3 +29,13 @@ knex.from('famous_people')
     }
   return
 })
+
+// General Select Query
+knex('famous_people').select().asCallback(function(err, rows) {
+  if (err) {
+    console.error(err)
+    return
+  }
+  console.log(rows)
+  return
+})
